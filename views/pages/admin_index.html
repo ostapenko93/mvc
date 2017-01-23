@@ -1,0 +1,15 @@
+<h3> Страницы </h3>
+<table class="table">
+    <?php foreach($data["pages"] as $page_data) :?>
+        <tr>
+            <td><?= $page_data['title'];?></td>
+            <td>
+                <a href="/admin/pages/edit/<?= $page_data['id'];?>"><button class="btn btn-primary">Редактировать</button></a>
+                <a href="/admin/pages/delete/<?= $page_data['id'];?>"><button class="btn btn-danger" onclick=" return confirmDelete()">Удалить</button></a>
+            </td>
+        </tr>
+    <?php endforeach;?>
+</table>
+<div>
+    <a href="/admin/pages/add/"><button class="btn btn-success">Добавить страницу</button></a>
+</div>
